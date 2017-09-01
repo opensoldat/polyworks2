@@ -23,6 +23,7 @@ type
     BackgroundCheckBox: TCheckBox;
     GridCheckBox: TCheckBox;
     LightsCheckBox: TCheckBox;
+    procedure FormShow(Sender: TObject);
   private
     { private declarations }
   public
@@ -34,7 +35,18 @@ var
 
 implementation
 
+uses
+  main;
+
 {$R *.lfm}
+
+{ TDisplayWindow }
+
+procedure TDisplayWindow.FormShow(Sender: TObject);
+begin
+  self.Top := MainWindow.Top;
+  self.Left := MainWindow.Left + MainWindow.Width;
+end;
 
 end.
 

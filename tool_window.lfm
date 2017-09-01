@@ -11,6 +11,7 @@ object ToolWindow: TToolWindow
   Constraints.MinWidth = 64
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
+  OnShow = FormShow
   LCLVersion = '1.6.4.0'
   object Image1: TImage
     Left = 0
