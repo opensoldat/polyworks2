@@ -1,7 +1,7 @@
 object DisplayWindow: TDisplayWindow
-  Left = 1858
+  Left = 1664
   Height = 141
-  Top = 551
+  Top = 234
   Width = 208
   Caption = 'Display'
   ClientHeight = 141

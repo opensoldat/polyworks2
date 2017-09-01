@@ -10,6 +10,7 @@ object MainWindow: TMainWindow
   Constraints.MinWidth = 208
   Menu = MainMenu1
   OnCreate = FormCreate
+  Position = poScreenCenter
   LCLVersion = '1.6.4.0'
   object StatusBar1: TStatusBar
     Left = 0

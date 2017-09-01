@@ -18,8 +18,9 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="2"/>
+      <BuildNr Value="1"/>
       <Attributes pvaPreRelease="True"/>
-      <StringTable CompanyName="Gregor A. Cieslak" FileDescription="Mapeditor for Soldat" InternalName="Soldat PolyWorks 2" LegalCopyright="Gregor A. Cieslak" OriginalFilename="polyworks2.exe" ProductName="Soldat PolyWorks 2"/>
+      <StringTable CompanyName="Gregor A. Cieslak" FileDescription="Mapeditor for Soldat" InternalName="Soldat PolyWorks 2" LegalCopyright="Gregor A. Cieslak" OriginalFilename="polyworks2.exe" ProductName="Soldat PolyWorks 2" ProductVersion=""/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>

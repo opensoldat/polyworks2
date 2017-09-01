@@ -1,12 +1,12 @@
 object ToolWindow: TToolWindow
-  Left = 2394
+  Left = 658
   Height = 224
-  Top = 551
-  Width = 213
+  Top = 234
+  Width = 64
   BorderStyle = bsToolWindow
   Caption = 'Tools'
   ClientHeight = 224
-  ClientWidth = 213
+  ClientWidth = 64
   Constraints.MinHeight = 224
   Constraints.MinWidth = 64
   OnCreate = FormCreate
