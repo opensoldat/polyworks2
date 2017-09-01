@@ -1,0 +1,98 @@
+object DisplayWindow: TDisplayWindow
+  Left = 1858
+  Height = 141
+  Top = 551
+  Width = 208
+  Caption = 'Display'
+  ClientHeight = 141
+  ClientWidth = 208
+  LCLVersion = '1.6.4.0'
+  object WaypointsCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 8
+    Width = 76
+    Caption = 'Waypoints'
+    TabOrder = 0
+  end
+  object ObjectsCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 24
+    Width = 60
+    Caption = 'Objects'
+    TabOrder = 1
+  end
+  object SceneryCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 40
+    Width = 61
+    Caption = 'Scenery'
+    TabOrder = 2
+  end
+  object PointsCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 56
+    Width = 53
+    Caption = 'Points'
+    TabOrder = 3
+  end
+  object WireframeCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 72
+    Width = 75
+    Caption = 'Wireframe'
+    TabOrder = 4
+  end
+  object TextureCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 88
+    Width = 59
+    Caption = 'Texture'
+    TabOrder = 5
+  end
+  object PolygonsCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 104
+    Width = 69
+    Caption = 'Polygons'
+    TabOrder = 6
+  end
+  object BackgroundCheckBox: TCheckBox
+    Left = 10
+    Height = 19
+    Top = 120
+    Width = 84
+    Caption = 'Background'
+    TabOrder = 7
+  end
+  object GridCheckBox: TCheckBox
+    Left = 107
+    Height = 19
+    Top = 8
+    Width = 42
+    Caption = 'Grid'
+    TabOrder = 8
+  end
+  object LightsCheckBox: TCheckBox
+    Left = 107
+    Height = 19
+    Top = 24
+    Width = 52
+    Caption = 'Lights'
+    TabOrder = 9
+  end
+  object SketchCheckBox: TCheckBox
+    Left = 107
+    Height = 19
+    Top = 40
+    Width = 55
+    Caption = 'Sketch'
+    TabOrder = 10
+  end
+end

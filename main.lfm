@@ -1,0 +1,385 @@
+object MainWindow: TMainWindow
+  Left = 722
+  Height = 715
+  Top = 215
+  Width = 941
+  Caption = 'Soldat PolyWorks 2 - Untitled'
+  ClientHeight = 695
+  ClientWidth = 941
+  Constraints.MinHeight = 200
+  Constraints.MinWidth = 208
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 672
+    Width = 941
+    Panels = <>
+    SimpleText = 'Untitled.pms  Zoom:125%  Pick a Vertex Color  Position: 420,1337'
+  end
+  object Button1: TButton
+    Left = 48
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object MainMenu1: TMainMenu
+    left = 232
+    top = 16
+    object FileMenu: TMenuItem
+      Caption = 'File'
+      OnClick = FileMenuClick
+      object NewMenu: TMenuItem
+        Caption = 'New'
+      end
+      object OpenMenu: TMenuItem
+        Caption = 'Open...'
+      end
+      object OpenCompiledMenu: TMenuItem
+        Caption = 'Open Compiled...'
+      end
+      object OpenRecentMenu: TMenuItem
+        Caption = 'Open Recent...'
+      end
+      object MenuItem1: TMenuItem
+        Caption = '-'
+      end
+      object SaveMenu: TMenuItem
+        Caption = 'Save...'
+      end
+      object SaveAsMenu: TMenuItem
+        Caption = 'Save As...'
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object CompileToPMSMenu: TMenuItem
+        Caption = 'Compile to PMS'
+      end
+      object CompileToPMSAsMenu: TMenuItem
+        Caption = 'Compile to PMS As...'
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object ExportMenu: TMenuItem
+        Caption = 'Export...'
+      end
+      object ImportMenu: TMenuItem
+        Caption = 'Import...'
+      end
+      object MenuItem4: TMenuItem
+        Caption = '-'
+      end
+      object RunMenu: TMenuItem
+        Caption = 'Run Soldat'
+      end
+      object MenuItem5: TMenuItem
+        Caption = '-'
+      end
+      object ExitMenu: TMenuItem
+        Caption = 'Exit'
+        OnClick = ExitMenuClick
+      end
+    end
+    object EditMenu: TMenuItem
+      Caption = 'Edit'
+      OnClick = EditMenuClick
+      object UndoMenu: TMenuItem
+        Caption = 'Undo'
+        ShortCut = 16474
+      end
+      object RedoMenu: TMenuItem
+        Caption = 'Redo'
+        ShortCut = 16473
+      end
+      object MenuItem8: TMenuItem
+        Caption = '-'
+      end
+      object DuplicateMenu: TMenuItem
+        Caption = 'Duplicate'
+      end
+      object CopyMenu: TMenuItem
+        Caption = 'Copy'
+        ShortCut = 16451
+      end
+      object PasteMenu: TMenuItem
+        Caption = 'Paste'
+        ShortCut = 16470
+      end
+      object ClearMenu: TMenuItem
+        Caption = 'Clear'
+        ShortCut = 46
+      end
+      object MenuItem13: TMenuItem
+        Caption = '-'
+      end
+      object SelectAllMenu: TMenuItem
+        Caption = 'Select All'
+        ShortCut = 16449
+      end
+      object InvertSelectionMenu: TMenuItem
+        Caption = 'Invert Selection'
+        ShortCut = 16457
+      end
+      object DeselectMenu: TMenuItem
+        Caption = 'Deselect'
+        ShortCut = 16452
+      end
+      object SelectByColorMenu: TMenuItem
+        Caption = 'Select by Color'
+        ShortCut = 16450
+      end
+      object MenuItem7: TMenuItem
+        Caption = '-'
+      end
+      object ArrangeMenu: TMenuItem
+        Caption = 'Arrange'
+        object BringToFrontMenu: TMenuItem
+          Caption = 'Bring to Front'
+        end
+        object BringForwardMenu: TMenuItem
+          Caption = 'Bring Forward'
+        end
+        object SendBackwardMenu: TMenuItem
+          Caption = 'Send Backward'
+        end
+        object SendToBackMenu: TMenuItem
+          Caption = 'Send to Back'
+        end
+      end
+      object MenuItem10: TMenuItem
+        Caption = '-'
+      end
+      object SplitAtVertexMenu: TMenuItem
+        Caption = 'Split at Vertex'
+        ShortCut = 16460
+      end
+      object JoinVerticesMenu: TMenuItem
+        Caption = 'Join Vertices'
+        ShortCut = 16458
+      end
+      object SnapSelectedVerticesMenu: TMenuItem
+        Caption = 'Snap Selected Vertices'
+      end
+      object CreateWithSelectedMenu: TMenuItem
+        Caption = 'Create with Selected'
+        ShortCut = 16453
+      end
+      object TransformMenu: TMenuItem
+        Caption = 'Transform'
+        object Rotate180Menu: TMenuItem
+          Caption = 'Rotate 180°'
+        end
+        object Rotate90CWMenu: TMenuItem
+          Caption = 'Rotate 90° CW'
+        end
+        object Rotate90CCWMenu: TMenuItem
+          Caption = 'Rotate 90° CCW'
+        end
+        object MenuItem17: TMenuItem
+          Caption = '-'
+        end
+        object FlipHorizontalMenu: TMenuItem
+          Caption = 'Flip Horizontal'
+        end
+        object FlipVerticalMenu: TMenuItem
+          Caption = 'Flip Vertical'
+        end
+      end
+      object MenuItem12: TMenuItem
+        Caption = '-'
+      end
+      object ServerConnectionsMenu: TMenuItem
+        Caption = 'Server Connections'
+      end
+      object MenuItem9: TMenuItem
+        Caption = '-'
+      end
+      object ClearSketchMenu: TMenuItem
+        Caption = 'Clear Sketch'
+      end
+      object MenuItem11: TMenuItem
+        Caption = '-'
+      end
+      object MapSettingsMenu: TMenuItem
+        Caption = 'Map Settings...'
+        ShortCut = 16461
+      end
+      object MenuItem6: TMenuItem
+        Caption = '-'
+      end
+      object PreferencesMenu: TMenuItem
+        Caption = 'Preferences...'
+        ShortCut = 16464
+      end
+    end
+    object TextureMenu: TMenuItem
+      Caption = 'Texture'
+      OnClick = TextureMenuClick
+      object FixTextureMenu: TMenuItem
+        Caption = 'Fix Texture'
+        ShortCut = 16454
+      end
+      object UntextureMenu: TMenuItem
+        Caption = 'Untexture'
+        ShortCut = 16469
+      end
+      object TransFormTextureMenu: TMenuItem
+        Caption = 'Transform Texture'
+        object TextureRotate180Menu: TMenuItem
+          Caption = 'Rotate 180°'
+        end
+        object TextureRotate90CWMenu: TMenuItem
+          Caption = 'Rotate 90° CW'
+        end
+        object TextureRotate90CCWMenu: TMenuItem
+          Caption = 'Rotate 90° CCW'
+        end
+        object MenuItem20: TMenuItem
+          Caption = '-'
+        end
+        object TextureFlipHorizontalMenu: TMenuItem
+          Caption = 'Flip Horizontal'
+        end
+        object TextureFlipVerticalMenu: TMenuItem
+          Caption = 'Flip Vertical'
+        end
+      end
+      object MenuItem18: TMenuItem
+        Caption = '-'
+      end
+      object AverageVertexColorsMenu: TMenuItem
+        Caption = 'Average Vertex Colors'
+        ShortCut = 16455
+      end
+      object ApplyLightToVerticesMenu: TMenuItem
+        Caption = 'Apply Light to Vertices'
+      end
+      object MenuItem15: TMenuItem
+        Caption = '-'
+      end
+      object FixedTextureMenu: TMenuItem
+        Caption = 'Fixed Texture'
+      end
+      object UserDefindedXMenu: TMenuItem
+        Caption = 'User Definded X'
+      end
+      object UserDefindedYMenu: TMenuItem
+        Caption = 'User Definded Y'
+      end
+    end
+    object ViewMenu: TMenuItem
+      Caption = 'View'
+      object ZoomInMenu: TMenuItem
+        Caption = 'Zoom In'
+      end
+      object ZoomOutMenu: TMenuItem
+        Caption = 'Zoom Out'
+      end
+      object FitOnScreenMenu: TMenuItem
+        Caption = 'Fit on Screen'
+      end
+      object ActualSizeMenu: TMenuItem
+        Caption = 'Actual Size'
+      end
+      object ResetViewMenu: TMenuItem
+        Caption = 'Reset View'
+      end
+      object MenuItem23: TMenuItem
+        Caption = '-'
+      end
+      object ShowGridMenu: TMenuItem
+        Caption = 'Show Grid'
+      end
+      object SnapToGridMenu: TMenuItem
+        Caption = 'Snap to Grid'
+      end
+      object SnapToVerticesMenu: TMenuItem
+        Caption = 'Snap to Vertices'
+      end
+      object MenuItem21: TMenuItem
+        Caption = '-'
+      end
+      object BlendWireframeMenu: TMenuItem
+        Caption = 'Blend Wireframe'
+      end
+      object BlendPolysMenu: TMenuItem
+        Caption = 'Blend Polys'
+      end
+      object ShowSceneryLayersMenu: TMenuItem
+        Caption = 'Show Scenery Layers'
+        object BackMenu: TMenuItem
+          Caption = 'Back'
+          OnClick = BackMenuClick
+        end
+        object MiddleMenu: TMenuItem
+          Caption = 'Middle'
+        end
+        object FrontMenu: TMenuItem
+          Caption = 'Front'
+        end
+      end
+      object MenuItem26: TMenuItem
+        Caption = '-'
+      end
+      object RefreshMenu: TMenuItem
+        Caption = 'Refresh'
+        ShortCut = 116
+      end
+    end
+    object WindowMenu: TMenuItem
+      Caption = 'Window'
+      object WorkspaceMenu: TMenuItem
+        Caption = 'Workspace'
+        object LoadWorkspaceMenu: TMenuItem
+          Caption = 'Load Workspace...'
+        end
+        object SaveWorkspaceMenu: TMenuItem
+          Caption = 'Save Workspace...'
+        end
+        object ResetWindowLocationsMenu: TMenuItem
+          Caption = 'Reset Window Locations'
+        end
+      end
+      object ShowAllMenu: TMenuItem
+        Caption = 'Show All'
+      end
+      object HideAllMenu: TMenuItem
+        Caption = 'Hide All'
+      end
+      object MenuItem22: TMenuItem
+        Caption = '-'
+      end
+      object ToolsMenu: TMenuItem
+        Caption = 'Tools'
+      end
+      object DisplayMenu: TMenuItem
+        Caption = 'Display'
+      end
+      object PaletteMenu: TMenuItem
+        Caption = 'Palette'
+      end
+      object WaypointsMenu: TMenuItem
+        Caption = 'Waypoints'
+      end
+      object SceneryMenu: TMenuItem
+        Caption = 'Scenery'
+      end
+      object PropertiesMenu: TMenuItem
+        Caption = 'Properties'
+      end
+      object WindowTextureMenu: TMenuItem
+        Caption = 'Texture'
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = 'Help'
+    end
+  end
+end
