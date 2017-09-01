@@ -6,6 +6,7 @@ object DisplayWindow: TDisplayWindow
   Caption = 'Display'
   ClientHeight = 141
   ClientWidth = 208
+  FormStyle = fsStayOnTop
   LCLVersion = '1.6.4.0'
   object WaypointsCheckBox: TCheckBox
     Left = 10

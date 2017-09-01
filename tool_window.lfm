@@ -9,6 +9,7 @@ object ToolWindow: TToolWindow
   ClientWidth = 64
   Constraints.MinHeight = 224
   Constraints.MinWidth = 64
+  FormStyle = fsStayOnTop
   OnCreate = FormCreate
   LCLVersion = '1.6.4.0'
   object Image1: TImage
