@@ -129,11 +129,13 @@ type
     StatusBar1: TStatusBar;
     procedure BackMenuClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure DisplayMenuClick(Sender: TObject);
     procedure EditMenuClick(Sender: TObject);
     procedure ExitMenuClick(Sender: TObject);
     procedure FileMenuClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure TextureMenuClick(Sender: TObject);
+    procedure ToolsMenuClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -161,6 +163,11 @@ procedure TMainWindow.TextureMenuClick(Sender: TObject);
 begin
 end;
 
+procedure TMainWindow.ToolsMenuClick(Sender: TObject);
+begin
+  ToolWindow.ShowOnTop;
+end;
+
 procedure TMainWindow.EditMenuClick(Sender: TObject);
 begin
 end;
@@ -177,6 +184,11 @@ end;
 procedure TMainWindow.Button1Click(Sender: TObject);
 begin
   ToolWindow.ShowOnTop;
+  DisplayWindow.ShowOnTop;
+end;
+
+procedure TMainWindow.DisplayMenuClick(Sender: TObject);
+begin
   DisplayWindow.ShowOnTop;
 end;
 

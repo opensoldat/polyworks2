@@ -358,9 +358,11 @@ object MainWindow: TMainWindow
       end
       object ToolsMenu: TMenuItem
         Caption = 'Tools'
+        OnClick = ToolsMenuClick
       end
       object DisplayMenu: TMenuItem
         Caption = 'Display'
+        OnClick = DisplayMenuClick
       end
       object PaletteMenu: TMenuItem
         Caption = 'Palette'
