@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  Menus, StdCtrls, Arrow,
+  Menus, StdCtrls, Arrow, LMessages,
 
   tool_window, display_window;
 
@@ -127,6 +127,7 @@ type
     WindowMenu: TMenuItem;
     ViewMenu: TMenuItem;
     StatusBar1: TStatusBar;
+    procedure WMMove(var Message: TLMMove); message LM_MOVE;
     procedure BackMenuClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure DisplayMenuClick(Sender: TObject);
@@ -150,6 +151,22 @@ implementation
 {$R *.lfm}
 
 { TMainWindow }
+
+procedure TMainWindow.WMMove(var Message: TLMMove);
+begin
+  inherited WMMove(Message);
+  if Assigned(DisplayWindow) then
+  begin
+    DisplayWindow.Top := Top;
+    DisplayWindow.Left := Left + Width;
+  end;
+
+  if Assigned(ToolWindow) then
+  begin
+    ToolWindow.Top := Top;
+    ToolWindow.Left := Left - ToolWindow.ClientWidth;
+  end;
+end;
 
 procedure TMainWindow.FileMenuClick(Sender: TObject);
 begin
