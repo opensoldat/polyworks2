@@ -127,6 +127,7 @@ type
     WindowMenu: TMenuItem;
     ViewMenu: TMenuItem;
     StatusBar1: TStatusBar;
+    procedure FormChangeBounds(Sender: TObject);
     procedure WMMove(var Message: TLMMove); message LM_MOVE;
     procedure BackMenuClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -155,6 +156,21 @@ implementation
 procedure TMainWindow.WMMove(var Message: TLMMove);
 begin
   inherited WMMove(Message);
+  if Assigned(DisplayWindow) then
+  begin
+    DisplayWindow.Top := Top;
+    DisplayWindow.Left := Left + Width;
+  end;
+
+  if Assigned(ToolWindow) then
+  begin
+    ToolWindow.Top := Top;
+    ToolWindow.Left := Left - ToolWindow.ClientWidth;
+  end;
+end;
+
+procedure TMainWindow.FormChangeBounds(Sender: TObject);
+begin
   if Assigned(DisplayWindow) then
   begin
     DisplayWindow.Top := Top;

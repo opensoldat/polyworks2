@@ -9,6 +9,7 @@ object MainWindow: TMainWindow
   Constraints.MinHeight = 200
   Constraints.MinWidth = 208
   Menu = MainMenu1
+  OnChangeBounds = FormChangeBounds
   OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '1.6.4.0'
