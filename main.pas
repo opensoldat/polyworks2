@@ -5,8 +5,8 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  Menus, StdCtrls, Arrow, LMessages,
+  Classes, SysUtils, FileUtil, OpenGLContext, Forms, Controls, Graphics,
+  Dialogs, ComCtrls, Menus, StdCtrls, Arrow, LMessages,
 
   tool_window, display_window;
 
@@ -15,7 +15,6 @@ type
   { TMainWindow }
 
   TMainWindow = class(TForm)
-    Button1: TButton;
     MainMenu1: TMainMenu;
     FileMenu: TMenuItem;
     EditMenu: TMenuItem;
@@ -35,6 +34,7 @@ type
     BackMenu: TMenuItem;
     LoadWorkspaceMenu: TMenuItem;
     HelpMenu: TMenuItem;
+    OpenGLControl1: TOpenGLControl;
     SaveWorkspaceMenu: TMenuItem;
     ResetWindowLocationsMenu: TMenuItem;
     WorkspaceMenu: TMenuItem;

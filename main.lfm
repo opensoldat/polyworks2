@@ -21,14 +21,12 @@ object MainWindow: TMainWindow
     Panels = <>
     SimpleText = 'Untitled.pms  Zoom:125%  Pick a Vertex Color  Position: 420,1337'
   end
-  object Button1: TButton
-    Left = 48
-    Height = 25
-    Top = 16
-    Width = 75
-    Caption = 'Button1'
-    OnClick = Button1Click
-    TabOrder = 1
+  object OpenGLControl1: TOpenGLControl
+    Left = 0
+    Height = 674
+    Top = 0
+    Width = 941
+    Anchors = [akTop, akLeft, akRight, akBottom]
   end
   object MainMenu1: TMainMenu
     left = 232
