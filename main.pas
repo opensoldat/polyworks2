@@ -139,9 +139,7 @@ type
     procedure TextureMenuClick(Sender: TObject);
     procedure ToolsMenuClick(Sender: TObject);
   private
-    { private declarations }
   public
-    { public declarations }
   end;
 
 var
@@ -151,7 +149,6 @@ implementation
 
 {$R *.lfm}
 
-{ TMainWindow }
 
 procedure TMainWindow.WMMove(var Message: TLMMove);
 begin

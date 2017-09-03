@@ -9,17 +9,12 @@ uses
   Buttons, ExtCtrls;
 
 type
-
-  { TToolWindow }
-
   TToolWindow = class(TForm)
     Image1: TImage;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
-    { private declarations }
   public
-    { public declarations }
   end;
 
 var

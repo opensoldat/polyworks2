@@ -8,9 +8,6 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
-
-  { TDisplayWindow }
-
   TDisplayWindow = class(TForm)
     WaypointsCheckBox: TCheckBox;
     ObjectsCheckBox: TCheckBox;
@@ -25,9 +22,7 @@ type
     LightsCheckBox: TCheckBox;
     procedure FormShow(Sender: TObject);
   private
-    { private declarations }
   public
-    { public declarations }
   end;
 
 var
