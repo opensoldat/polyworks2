@@ -3,6 +3,7 @@ object DisplayWindow: TDisplayWindow
   Height = 141
   Top = 234
   Width = 208
+  BorderStyle = bsToolWindow
   Caption = 'Display'
   ClientHeight = 141
   ClientWidth = 208
