@@ -9,6 +9,9 @@ uses
   Buttons, ExtCtrls;
 
 type
+
+  { TToolWindow }
+
   TToolWindow = class(TForm)
     Image1: TImage;
     procedure FormCreate(Sender: TObject);
@@ -26,8 +29,6 @@ uses
   main;
 
 {$R *.lfm}
-
-{ TToolWindow }
 
 procedure TToolWindow.FormCreate(Sender: TObject);
 begin

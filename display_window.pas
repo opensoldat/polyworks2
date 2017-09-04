@@ -8,6 +8,9 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
+
+  { TDisplayWindow }
+
   TDisplayWindow = class(TForm)
     WaypointsCheckBox: TCheckBox;
     ObjectsCheckBox: TCheckBox;
@@ -34,8 +37,6 @@ uses
   main;
 
 {$R *.lfm}
-
-{ TDisplayWindow }
 
 procedure TDisplayWindow.FormShow(Sender: TObject);
 begin
