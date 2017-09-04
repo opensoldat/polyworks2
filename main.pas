@@ -129,6 +129,8 @@ type
     StatusBar1: TStatusBar;
     procedure FormChangeBounds(Sender: TObject);
     procedure WMMove(var Message: TLMMove); message LM_MOVE;
+    procedure OpenGLControl1Paint(Sender: TObject);
+    procedure OpenGLControl1Resize(Sender: TObject);
     procedure BackMenuClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure DisplayMenuClick(Sender: TObject);
@@ -148,6 +150,9 @@ var
 implementation
 
 {$R *.lfm}
+
+uses
+  gl;
 
 
 procedure TMainWindow.WMMove(var Message: TLMMove);
@@ -179,6 +184,27 @@ begin
     ToolWindow.Top := Top;
     ToolWindow.Left := Left - ToolWindow.ClientWidth;
   end;
+end;
+
+procedure TMainWindow.OpenGLControl1Paint(Sender: TObject);
+begin
+  glClearColor(0.27, 0.53, 0.71, 1.0);
+  glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT);
+  glLoadIdentity;
+  glBegin(GL_TRIANGLES);
+    glColor3f(1, 0, 0);
+    glVertex3f( 0.0, 1.0, 0.0);
+    glColor3f(0, 1, 0);
+    glVertex3f(-1.0,-1.0, 0.0);
+    glColor3f(0, 0, 1);
+    glVertex3f( 1.0,-1.0, 0.0);
+  glEnd;
+  OpenGLControl1.SwapBuffers;
+end;
+
+procedure TMainWindow.OpenGLControl1Resize(Sender: TObject);
+begin
+  OpenGLControl1Paint(Sender);
 end;
 
 procedure TMainWindow.FileMenuClick(Sender: TObject);

@@ -27,6 +27,8 @@ object MainWindow: TMainWindow
     Top = 0
     Width = 941
     Anchors = [akTop, akLeft, akRight, akBottom]
+    OnPaint = OpenGLControl1Paint
+    OnResize = OpenGLControl1Resize
   end
   object MainMenu1: TMainMenu
     left = 232
